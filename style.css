@@ -89,13 +89,14 @@ ul li a:hover:before {
 .navbar-nav li,
 #logo {
   opacity: 0;
-  animation: apareix 1.5s ease-in-out forwards;
+  animation: apareixNav 1.5s ease-in-out forwards;
 }
 
-@keyframes apareix {
+@keyframes apareixNav {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -107,10 +108,22 @@ ul li a:hover:before {
 }
 
 #video video {
-  width: 100%;
+width: 100%;
+   animation: apareixVideo 1.5s ease-in-out forwards;
 }
 
-#start{
+@keyframes apareixVideo {
+  0% {
+    transform-origin: right;
+    transform: scale(0) translateZ(-200px) translateX(-100%);
+  }
+
+  100% {
+    transform: scale(0.8) translateZ(0) translateX(0);
+  }
+}
+
+#start {
   border: 3px solid #000000;
   border-radius: 100px;
   width: 250px;
@@ -119,14 +132,12 @@ ul li a:hover:before {
   font-size: 20px;
 }
 
-h1{
+h1 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
 }
 
-h3{
+h3 {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
-
-
